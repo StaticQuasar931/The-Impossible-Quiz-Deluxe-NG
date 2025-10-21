@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Impossible Quiz Deluxe NG — Unblocked Ruffle Flash Game | StaticQuasar931</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Play The Impossible Quiz Deluxe NG unblocked with Ruffle. Works at school and on Chromebooks. Fullscreen, fast loading, school-safe mirror by StaticQuasar931." />
+
+  <!-- Canonical and social -->
+  <link rel="canonical" href="https://sites.google.com/view/staticquasar931/gm3z" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Impossible Quiz Deluxe NG — Unblocked" />
+  <meta property="og:description" content="Play The Impossible Quiz Deluxe NG in your browser with Ruffle. School-safe, Chromebook friendly, fullscreen." />
+  <meta property="og:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1758857231/Aeries_Favicon_Real_StaticQuasar931_m1uorx.ico" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Impossible Quiz Deluxe NG — Unblocked" />
+  <meta name="twitter:description" content="Play the classic in your browser with Ruffle. No Flash needed." />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dcsrqennd/image/upload/v1758857231/Aeries_Favicon_Real_StaticQuasar931_m1uorx.ico" />
+  <link rel="icon" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1758857231/Aeries_Favicon_Real_StaticQuasar931_m1uorx.ico" />
+
+  <!-- Keywords block -->
+  <meta name="keywords" content="Impossible Quiz Deluxe NG, Impossible Quiz Deluxe, impossible quiz, impossible quiz ng, impossible quiz deluxe unblocked, impossible quiz unblocked, flash game unblocked, ruffle impossible quiz, working at school, school safe, Chromebook game, StaticQuasar931, static 931, staticquasar, staticq, staticq931, 931 games, 931 g@mes, game, g@me, unbl0cked, games at school, play impossible quiz at school" />
+
+  <style>
+    :root {
+      --ui-bg: #0e0f12;
+      --ui-panel: #171920;
+      --ui-accent: #5ee1ff;
+      --ui-text: #e9eef3;
+      --ui-muted: #9aa3ad;
+      --shadow: 0 8px 28px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--ui-bg);
+      color: var(--ui-text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+    }
+
+    /* Fullscreen responsive stage */
+    #stage {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: #000;
+    }
+    ruffle-player, #ruffle-container {
+      width: 100vw;
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      background: #000;
+    }
+
+    /* Top left Static Menu link with twinkle */
+    .static-menu {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: 30;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .static-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--ui-text);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(4px);
+      transition: transform .15s ease, border-color .15s ease;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .static-link:hover { transform: translateY(-1px); border-color: rgba(94,225,255,.7); }
+    .twinkle {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--ui-accent);
+      box-shadow: 0 0 12px var(--ui-accent), 0 0 24px var(--ui-accent);
+      animation: twinkle 2.6s ease-in-out infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: .15; transform: scale(.7) }
+      50% { opacity: 1; transform: scale(1) }
+    }
+    .label-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      color: #cfe9ff;
+    }
+
+    /* Rotating icons bottom right */
+    .rotators {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 40;
+      display: grid;
+      gap: 10px;
+      user-select: none;
+    }
+    .rotator-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: var(--shadow);
+      color: var(--ui-text);
+      text-decoration: none;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+      transition: transform .12s ease, background .2s ease;
+      white-space: nowrap;
+    }
+    .rotator-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.12); }
+    .icon {
+      width: 22px; height: 22px; border-radius: 6px;
+      background-size: cover; background-position: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.2);
+    }
+    .ig { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'); }
+    .gf { background-image: url('https://ssl.gstatic.com/docs/doclist/images/icon_11_forms_list.png'); }
+
+    /* Header bar with controls */
+    .bar {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 14px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(10,12,16,.55);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 8px 12px;
+      border-radius: 12px;
+      color: var(--ui-text);
+      backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+      font-size: 14px;
+    }
+    .bar button {
+      appearance: none; border: 0; cursor: pointer;
+      padding: 8px 10px; border-radius: 10px;
+      background: rgba(255,255,255,.08);
+      color: var(--ui-text); font-weight: 600;
+    }
+    .bar button:hover { background: rgba(255,255,255,.12); }
+
+    /* Dismissible small helper link styling */
+    .hideable { display: inline-flex; align-items: center; gap: 8px; }
+    .hideable .x {
+      width: 18px; height: 18px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+      font-size: 12px; cursor: pointer;
+    }
+
+    /* Hidden SEO content area for crawlers but kept accessible */
+    .seo {
+      position: absolute;
+      left: -9999px;
+      width: 1px; height: 1px; overflow: hidden;
+    }
+
+    /* Small helper tips message */
+    .tip {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 16px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--ui-text);
+      padding: 8px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      z-index: 35;
+      backdrop-filter: blur(4px);
+    }
+    @media (max-width: 640px) {
+      .bar { top: auto; bottom: 76px; }
+      .rotators { right: 10px; bottom: 10px; }
+      .static-menu { top: 10px; left: 10px; }
+    }
+  </style>
+
+  <!-- Ruffle runtime -->
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "hidden",
+      backgroundColor: "#000000",
+      letterbox: "fullscreen",
+      showSwfDownload: false,
+      quality: "high",
+      openUrlMode: "confirm"
+    };
+  </script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle@latest/ruffle.js" defer></script>
+</head>
+<body>
+
+  <!-- Top-left Static Menu link and game label -->
+  <div class="static-menu" id="staticMenu">
+    <a class="static-link hideable" id="moreLink" href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank" rel="noopener">
+      <span class="twinkle" aria-hidden="true"></span>
+      ⭐ More Unblocked Games by Static
+      <span class="x" id="hideBtn" title="Hide for a bit">×</span>
+    </a>
+    <div class="label-pill" title="Game label">
+      The Impossible Quiz Deluxe NG <span style="opacity:.7">alternate (unblocked)</span>
+    </div>
+  </div>
+
+  <!-- Center bar with controls -->
+  <div class="bar" role="toolbar" aria-label="Game Controls">
+    <span style="opacity:.85">The Impossible Quiz Deluxe NG</span>
+    <button id="btnFullscreen" title="Toggle fullscreen">Fullscreen</button>
+    <button id="btnFocus" title="Focus game for keyboard">Focus</button>
+    <button id="btnReload" title="Reload game">Reload</button>
+  </div>
+
+  <!-- Game stage -->
+  <main id="stage" aria-label="Game area">
+    <div id="ruffle-container">
+      <!-- Ruffle inserts a player shadow DOM here -->
+    </div>
+  </main>
+
+  <!-- Bottom-right rotating buttons -->
+  <div class="rotators" aria-label="Helpful links">
+    <a class="rotator-btn" id="rotBtn" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener">
+      <span class="icon gf" aria-hidden="true"></span>
+      Suggest a Game
+    </a>
+    <a class="rotator-btn" href="https://www.instagram.com/freeschoolgamepage/" target="_blank" rel="noopener">
+      <span class="icon ig" aria-hidden="true"></span>
+      Instagram
+    </a>
+  </div>
+
+  <!-- Tip banner -->
+  <div class="tip" id="tip">
+    Tip: If the game does not load, press Reload or try another mirror on our games list.
+  </div>
+
+  <!-- Hidden SEO content (200+ words, internal links absolute, keywords variations included) -->
+  <section class="seo" aria-hidden="true">
+    <h1>The Impossible Quiz Deluxe NG unblocked with Ruffle</h1>
+    <p>
+      This page lets you play <strong>The Impossible Quiz Deluxe NG</strong> in your browser using the
+      <em>Ruffle</em> Flash emulator. No plug-ins required. It works on Chromebooks, Windows, Mac, and most school networks.
+      If your school blocks typical Flash sites, this build is designed to be <strong>school-safe</strong> and to load
+      over HTTPS. StaticQuasar931 maintains mirrors so students can enjoy classic titles for free time and brain breaks.
+      If you prefer another version or need a different mirror, visit the full games list at
+      <a href="https://sites.google.com/view/staticquasar931/gm3z">StaticQuasar931 Games</a>.
+    </p>
+    <p>
+      Controls are simple. Use your mouse to pick answers, and watch for tricky humor. The original series is famous
+      for puzzle twists that require lateral thinking. Some levels include time limits or unusual mechanics that
+      reward experimentation. If your audio output is muted by default, use the game buttons above to focus the
+      window. You can go fullscreen from the toolbar or with your browser hotkey. If your save resets, that is normal
+      with Flash conversions. Keep the tab open to maintain progress.
+    </p>
+    <p>
+      Looking for more school friendly content? Try our categories and backups hosted on Google Sites:
+      <a href="https://sites.google.com/view/staticquasar931">homepage</a>,
+      <a href="https://sites.google.com/view/staticquasar931/gm3z">main games list</a>, and
+      <a href="https://sites.google.com/view/staticquasar931/gm3z/coreball">Core Ball</a>.
+      Keywords to help you find this page include: impossible quiz deluxe ng unblocked game, working at school game,
+      school safe game mirror, staticquasar931, static 931, staticq931, staticq, 931 games, 931 g@mes, game, g@me,
+      unbl0cked, Chromebook friendly.
+    </p>
+  </section>
+
+  <script>
+    // Leave warning
+    window.onbeforeunload = function () {
+      return "Leaving will close the game. Make sure you are done.";
+    };
+
+    // Mount Ruffle player
+    function mountRuffle() {
+      const container = document.getElementById('ruffle-container');
+      container.innerHTML = "";
+      const ruffle = window.RufflePlayer?.newest();
+      const player = ruffle.createPlayer();
+      player.style.width = "100%";
+      player.style.height = "100%";
+      player.id = "ruffle-player";
+      container.appendChild(player);
+
+      // Path to your SWF inside the repo. Update if you rename or move it.
+      const swfPath = "./365143_Impossible_Quiz_Deluxe_NG.swf";
+      player.load(swfPath).catch((e) => {
+        console.error("Ruffle load error:", e);
+        document.getElementById('tip').textContent = "Could not load SWF. Make sure the file path is correct.";
+      });
+
+      // Control hooks
+      document.getElementById('btnFullscreen').onclick = () => player.requestFullscreen();
+      document.getElementById('btnFocus').onclick = () => player.focus();
+      document.getElementById('btnReload').onclick = () => mountRuffle();
+    }
+    document.addEventListener("DOMContentLoaded", mountRuffle);
+
+    // Rotating button that alternates Google Form and Instagram every few seconds
+    (function rotate() {
+      const rot = document.getElementById('rotBtn');
+      let onForm = true;
+      setInterval(() => {
+        onForm = !onForm;
+        if (onForm) {
+          rot.href = "https://sites.google.com/view/staticquasar931/google-form";
+          rot.querySelector(".icon").className = "icon gf";
+          rot.lastChild.nodeValue = "Suggest a Game";
+        } else {
+          rot.href = "https://www.instagram.com/freeschoolgamepage/";
+          rot.querySelector(".icon").className = "icon ig";
+          rot.lastChild.nodeValue = "Instagram";
+        }
+      }, 6000);
+    })();
+
+    // Hide top link for 3 minutes when closed, then restore
+    const hideBtn = document.getElementById('hideBtn');
+    const moreLink = document.getElementById('moreLink');
+    function restoreMenu() { moreLink.style.display = "inline-flex"; }
+    hideBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      moreLink.style.display = "none";
+      setTimeout(restoreMenu, 180000);
+    });
+
+    // Ensure keyboard goes to the game when you click stage background
+    document.getElementById('stage').addEventListener('click', () => {
+      const p = document.getElementById('ruffle-player');
+      if (p && p.focus) p.focus();
+    });
+
+    // Resize observer keeps the stage perfectly fitted
+    new ResizeObserver(() => {
+      const p = document.getElementById('ruffle-player');
+      if (p) { p.style.width = "100%"; p.style.height = "100%"; }
+    }).observe(document.body);
+  </script>
+</body>
+</html>
