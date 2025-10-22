@@ -1,62 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Charset & Viewport -->
   <meta charset="utf-8" />
-  <title>The Impossible Quiz Deluxe NG • Unblocked Ruffle Flash Game | StaticQuasar931</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Play The Impossible Quiz Deluxe NG unblocked in your browser with Ruffle. Works at school, Chromebook friendly, fullscreen, and hosted by StaticQuasar931." />
 
-  <!-- Canonical + social -->
+  <!-- Canonical, Robots, Theme -->
   <link rel="canonical" href="https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0b0b0f" />
+
+  <!-- Title -->
+  <title>The Impossible Quiz Deluxe NG Unblocked | StaticQuasar931</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="Play The Impossible Quiz Deluxe NG unblocked with Ruffle. Works at school, Chromebook friendly, fullscreen, and hosted by StaticQuasar931." />
+  <meta name="keywords" content="The Impossible Quiz Deluxe NG, Impossible Quiz Deluxe NG, Impossible Quiz, impossible quiz deluxe, impossible quiz ng, unblocked impossible quiz, impossible quiz deluxe ng unblocked game, impossible quiz unblocked g@me, ruffle flash emulator, flash game at school, school safe games, Chromebook game, free browser game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="The Impossible Quiz Deluxe NG — Unblocked" />
-  <meta property="og:description" content="Play The Impossible Quiz Deluxe NG with Ruffle. No Flash needed. School safe and Chromebook friendly." />
+  <meta property="og:description" content="Play The Impossible Quiz Deluxe NG with the Ruffle Flash emulator. No plugins required. School safe and Chromebook friendly." />
+  <meta property="og:url" content="https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG/" />
   <meta property="og:image" content="https://res.cloudinary.com/dlq5fztla/image/upload/v1761090959/flash_365143_card_a5fbku.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Impossible Quiz Deluxe NG — Unblocked" />
   <meta name="twitter:description" content="Play the classic Impossible Quiz Deluxe NG right in your browser with Ruffle." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dlq5fztla/image/upload/v1761090959/flash_365143_card_a5fbku.png" />
+
+  <!-- Favicon -->
   <link rel="icon" href="https://res.cloudinary.com/dlq5fztla/image/upload/v1761091026/screenshot_03-removebg-preview_wgfuii.png" />
 
-  <!-- Keywords -->
-  <meta name="keywords" content="Impossible Quiz Deluxe NG, Impossible Quiz, impossible quiz deluxe, impossible quiz ng, unblocked impossible quiz, ruffle flash emulator, flash game at school, Chromebook game, StaticQuasar931, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked game, game, g@me" />
+  <!-- Preload rotating popup icons (Google Form, Instagram) -->
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png">
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png">
 
   <style>
     :root{
       --bg:#0d0f13; --panel:#141823; --text:#e8edf2; --muted:#a1adbb; --accent:#5fe1ff;
       --shadow:0 8px 28px rgba(0,0,0,.35);
     }
-    html,body{height:100%;margin:0;background:#000;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif}
+    html,body{height:100%;margin:0;background:#000;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;overflow:hidden}
     #stage{position:fixed;inset:0;display:grid;place-items:center;background:#000}
     ruffle-player,#ruffle-container{width:100vw;height:100vh;display:block;background:#000}
 
     /* Top-left Static link + label */
     .static-menu{position:fixed;top:14px;left:14px;z-index:30;display:flex;flex-direction:column;gap:8px}
+    .static-menu-wrap{display:flex;align-items:center;gap:8px}
     .static-link{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;
       border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
-      color:var(--text);text-decoration:none;backdrop-filter:blur(4px);box-shadow:var(--shadow);font-weight:700;font-size:14px}
+      color:var(--text);text-decoration:none;backdrop-filter:blur(4px);box-shadow:var(--shadow);font-weight:800;font-size:14px}
     .static-link:hover{border-color:rgba(95,225,255,.8)}
     .twinkle{position:absolute;top:-6px;right:-6px;width:10px;height:10px;border-radius:50%;background:var(--accent);
       box-shadow:0 0 12px var(--accent),0 0 24px var(--accent);animation:twinkle 2.6s ease-in-out infinite}
     @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
     .label{display:inline-flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;
       border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#cfe9ff;font-size:12px}
+    .close-menu{cursor:pointer;user-select:none;padding:4px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);font-weight:700;color:#ff6b6b}
 
     /* Center control bar */
     .bar{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:20;display:inline-flex;align-items:center;gap:10px;
       background:rgba(10,12,16,.55);border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:12px;
       box-shadow:var(--shadow);backdrop-filter:blur(6px);font-size:14px}
     .bar button{appearance:none;border:0;cursor:pointer;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.08);
-      color:var(--text);font-weight:700}
+      color:var(--text);font-weight:800}
     .bar button:hover{background:rgba(255,255,255,.12)}
 
     /* Bottom-right rotating buttons */
-    .rotators{position:fixed;right:16px;bottom:16px;z-index:40;display:grid;gap:10px}
-    .rotator-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);box-shadow:var(--shadow);color:var(--text);text-decoration:none;font-weight:700;backdrop-filter:blur(4px)}
-    .icon{width:22px;height:22px;border-radius:6px;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
-    .ig{background-image:url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png')}
-    .gf{background-image:url('https://ssl.gstatic.com/docs/doclist/images/icon_11_forms_list.png')}
+    .rotators{position:fixed;right:16px;bottom:24px;z-index:40;width:100px;height:100px;pointer-events:none;opacity:0;transform:translateX(140px) scale(.96)}
+    .rotators a{display:block;width:100%;height:100%}
+    .rotators img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    .slide-in{animation:slideIn 2s ease forwards}
+    .slide-out{animation:slideOut 2s ease forwards}
+    @keyframes slideIn{from{opacity:0;transform:translateX(140px) scale(.96)}to{opacity:1;transform:translateX(0) scale(1)}}
+    @keyframes slideOut{from{opacity:1;transform:translateX(0) scale(1)}to{opacity:0;transform:translateX(140px) scale(.96)}}
+    @media (max-width:768px){ .rotators{width:84px;height:84px} }
 
     /* Tip */
     .tip{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;background:rgba(255,255,255,.08);
@@ -70,7 +89,24 @@
     }
   </style>
 
-  <!-- Ruffle -->
+  <!-- JSON-LD: VideoGame -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "The Impossible Quiz Deluxe NG",
+    "genre": "Puzzle",
+    "applicationCategory": "Game",
+    "operatingSystem": "Web",
+    "playMode": "SinglePlayer",
+    "url": "https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG/",
+    "image": "https://res.cloudinary.com/dlq5fztla/image/upload/v1761090959/flash_365143_card_a5fbku.png",
+    "author": { "@type": "Organization", "name": "StaticQuasar931" },
+    "publisher": { "@type": "Organization", "name": "StaticQuasar931" }
+  }
+  </script>
+
+  <!-- Ruffle config + script -->
   <script>
     window.RufflePlayer = window.RufflePlayer || {};
     window.RufflePlayer.config = {
@@ -88,10 +124,13 @@
 <body>
   <!-- Static link + label -->
   <div class="static-menu" id="staticMenu">
-    <a class="static-link" id="moreLink" href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank" rel="noopener">
-      <span class="twinkle" aria-hidden="true"></span>
-      More Unblocked Games by Static
-    </a>
+    <div class="static-menu-wrap">
+      <a class="static-link" id="moreLink" href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank" rel="noopener">
+        <span class="twinkle" aria-hidden="true"></span>
+        More Unblocked Games by Static
+      </a>
+      <button id="closeStaticMenu" class="close-menu" title="Hide temporarily">✕</button>
+    </div>
     <div class="label">
       The Impossible Quiz Deluxe NG <span style="opacity:.7">alternate (unblocked)</span>
     </div>
@@ -99,7 +138,7 @@
 
   <!-- Controls -->
   <div class="bar" role="toolbar" aria-label="Game Controls">
-    <span style="opacity:.85">The Impossible Quiz Deluxe NG</span>
+    <span style="opacity:.85;font-weight:800">The Impossible Quiz Deluxe NG</span>
     <button id="btnFullscreen" title="Toggle fullscreen">Fullscreen</button>
     <button id="btnFocus" title="Focus game">Focus</button>
     <button id="btnReload" title="Reload game">Reload</button>
@@ -110,34 +149,29 @@
     <div id="ruffle-container"></div>
   </main>
 
-  <!-- Helpful links -->
-  <div class="rotators">
-    <a class="rotator-btn" id="rotBtn" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener">
-      <span class="icon gf" aria-hidden="true"></span> Suggest a Game
-    </a>
-    <a class="rotator-btn" href="https://www.instagram.com/freeschoolgamepage/" target="_blank" rel="noopener">
-      <span class="icon ig" aria-hidden="true"></span> Instagram
+  <!-- Rotating quick-link (Google Form ↔ Instagram) -->
+  <div class="rotators" id="staticSlideMenu" aria-live="polite">
+    <a id="staticSlideLink" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank" rel="noopener">
+      <img id="staticSlideImg" src="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png" alt="StaticQuasar931 Google Form for feedback" />
     </a>
   </div>
 
-  <div class="tip" id="tip">Loading… if it stalls, press Reload. This build tries multiple SWF paths automatically.</div>
+  <div class="tip" id="tip">Loading. If it stalls, press Reload. This build tries the working SWF path first.</div>
 
   <!-- Hidden SEO content (200+ words) -->
   <section class="seo" aria-hidden="true">
     <h1>The Impossible Quiz Deluxe NG unblocked with Ruffle</h1>
     <p>
-      Play <strong>The Impossible Quiz Deluxe NG</strong> in your browser with the Ruffle emulator. No Flash plug-ins are required.
-      This page is tuned for school networks and Chromebooks. If your district blocks common Flash mirrors, this GitHub Pages host
-      keeps things simple and secure over HTTPS. Use the control bar to go fullscreen, refocus keyboard input, or reload if needed.
-      Your progress is temporary. Keep the tab open for long sessions.
+      Play <strong>The Impossible Quiz Deluxe NG</strong> right in your browser using the Ruffle Flash emulator. No old plugins are needed and everything runs over HTTPS for safer school networks. This page is tuned for Chromebooks and locked down environments, keeping things simple while still providing fullscreen controls, focus fixes for keyboard input, and a fast reload button if your session stalls. The objective is to answer trick questions and survive the classic troll logic that made the Impossible Quiz series famous. Expect humor, surprise mechanics, and lots of restarts.
     </p>
     <p>
-      For more school friendly games, visit the full list at
-      <a href="https://sites.google.com/view/staticquasar931/gm3z">StaticQuasar931 Games</a> or the
-      <a href="https://sites.google.com/view/staticquasar931">homepage</a>. Try other popular pages like
-      <a href="https://sites.google.com/view/staticquasar931/gm3z/coreball">Core Ball</a>.
-      Keywords: impossible quiz deluxe ng unblocked game, impossible quiz unblocked, ruffle emulator, working at school, school safe,
-      staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me, Chromebook friendly.
+      This version is hosted by <strong>StaticQuasar931</strong> on GitHub Pages with a direct SWF link to improve reliability on school filters. If one mirror is blocked, the script can attempt alternative file names. Your progress is temporary and tied to the session. Keep the tab open during long play. For more school friendly pages, visit the full list at
+      <a href="https://sites.google.com/view/staticquasar931/gm3z">https://sites.google.com/view/staticquasar931/gm3z</a> or the main homepage at
+      <a href="https://sites.google.com/view/staticquasar931">https://sites.google.com/view/staticquasar931</a>. Popular pages include
+      <a href="https://sites.google.com/view/staticquasar931/gm3z/coreball">Core Ball</a> and other puzzle or arcade picks that load fullscreen on Chromebook, PC, and many mobile devices.
+    </p>
+    <p>
+      Keywords: the impossible quiz deluxe ng unblocked game, impossible quiz deluxe ng unblocked g@me, impossible quiz unblocked, ruffle emulator, flash game at school, school safe, Chromebook friendly, free puzzle game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me.
     </p>
   </section>
 
@@ -145,13 +179,40 @@
     // Leave warning per Static's standard
     window.onbeforeunload = function(){ return "Leaving will close the game. Make sure you are done."; };
 
-    const SITE_ROOT = "https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG";
-    // Candidate SWF names users mentioned. We will try each until one loads.
+    // Static Menu close + auto-restore after 3 minutes
+    (function(){
+      const menu = document.getElementById("staticMenu");
+      const btn  = document.getElementById("closeStaticMenu");
+      const KEY  = "sq931_staticMenu_hidden_until";
+      const restore = () => { menu.style.display = "flex"; };
+      const maybeHide = () => {
+        const until = parseInt(localStorage.getItem(KEY) || "0", 10);
+        const now = Date.now();
+        if (until && now < until){
+          menu.style.display = "none";
+          setTimeout(restore, until - now);
+        }
+      };
+      if (btn){
+        btn.onclick = () => {
+          menu.style.display = "none";
+          const until = Date.now() + 180000; // 3 minutes
+          localStorage.setItem(KEY, String(until));
+          setTimeout(restore, 180000);
+        };
+      }
+      maybeHide();
+    })();
+
+    // Ruffle mount + working SWF sequence
+    const ABS_ROOT = "https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG";
     const SWF_CANDIDATES = [
-      `${SITE_ROOT}/365143_Impossible_Quiz_Deluxe_NG.swf`,
-      `${SITE_ROOT}/365143_Impossible_Quiz_Deluxe_NG..swf`,
-      "./365143_Impossible_Quiz_Deluxe_NG.swf",
-      "./365143_Impossible_Quiz_Deluxe_NG..swf"
+      // Your reported working link first
+      `${ABS_ROOT}/365143_Impossible_Quiz_Deluxe_NG..swf`,
+      // Fallbacks
+      `${ABS_ROOT}/365143_Impossible_Quiz_Deluxe_NG.swf`,
+      "./365143_Impossible_Quiz_Deluxe_NG..swf",
+      "./365143_Impossible_Quiz_Deluxe_NG.swf"
     ];
 
     let currentIndex = 0;
@@ -176,7 +237,6 @@
 
     async function tryLoadSequence(isManualReload){
       const tip = document.getElementById("tip");
-      // If manual reload, start from the beginning.
       if(isManualReload) currentIndex = 0;
 
       for(let i=currentIndex;i<SWF_CANDIDATES.length;i++){
@@ -189,35 +249,53 @@
           return;
         }catch(e){
           console.warn("Failed swf path", url, e);
-          tip.textContent = `Could not load ${url}. Trying next path…`;
+          tip.textContent = `Could not load ${url}. Trying next path...`;
         }
       }
-      tip.textContent = "No SWF found at the tried paths. Confirm the file name in the repo. Expected one of: 365143_Impossible_Quiz_Deluxe_NG.swf or 365143_Impossible_Quiz_Deluxe_NG..swf at the site root.";
+      tip.textContent = "No SWF found at the tried paths. Confirm the file name in the repo. Expected one of: 365143_Impossible_Quiz_Deluxe_NG..swf or 365143_Impossible_Quiz_Deluxe_NG.swf at the site root.";
     }
 
-    // Rotate main button between Form and Instagram
-    (function rotate(){
-      const rot = document.getElementById("rotBtn");
-      let onForm = true;
-      setInterval(()=>{
-        onForm = !onForm;
-        if(onForm){
-          rot.href = "https://sites.google.com/view/staticquasar931/google-form";
-          rot.querySelector(".icon").className = "icon gf";
-          rot.lastChild.nodeValue = " Suggest a Game";
-        }else{
-          rot.href = "https://www.instagram.com/freeschoolgamepage/";
-          rot.querySelector(".icon").className = "icon ig";
-          rot.lastChild.nodeValue = " Instagram";
-        }
-      }, 6000);
-    })();
-
-    // Focus when clicking the stage background
+    // Click anywhere on stage to focus the player
     document.getElementById("stage").addEventListener("click", ()=>{ if(player && player.focus) player.focus(); });
 
     // Keep the player perfectly fitted
     new ResizeObserver(()=>{ if(player){ player.style.width="100%"; player.style.height="100%"; } }).observe(document.body);
+
+    // Rotating popup: Google Form ↔ Instagram
+    (function(){
+      const wrap = document.getElementById("staticSlideMenu");
+      const a    = document.getElementById("staticSlideLink");
+      const img  = document.getElementById("staticSlideImg");
+
+      const LINKS = [
+        {src:"https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png", alt:"Google Form — send feedback to StaticQuasar931", link:"https://sites.google.com/view/staticquasar931/google-form"},
+        {src:"https://res.cloudinary.com/dcsrqennd/image/upload/v1747533158/raw_cw34yi.png", alt:"Instagram — follow @freeschoolgamepage", link:"https://www.instagram.com/freeschoolgamepage/"}
+      ];
+
+      // Preload all images
+      LINKS.forEach(o => { const p = new Image(); p.decoding="async"; p.src = o.src; });
+
+      let i = 0;
+      const show = (o) => { img.src=o.src; img.alt=o.alt; a.href=o.link; };
+
+      async function loop(){
+        for(;;){
+          show(LINKS[i]);
+          wrap.classList.add('slide-in'); wrap.style.pointerEvents="auto";
+          await new Promise(r=>setTimeout(r, 5000));   // visible 5s
+          wrap.classList.remove('slide-in');
+          wrap.classList.add('slide-out'); wrap.style.pointerEvents="none";
+          await new Promise(r=>setTimeout(r, 2000));   // animate out 2s
+          wrap.classList.remove('slide-out');          // hidden now
+          await new Promise(r=>setTimeout(r, 20000));  // gap 20s
+          i = (i + 1) % LINKS.length;                  // next item
+        }
+      }
+
+      // Start with Google Form then Instagram
+      show(LINKS[0]);
+      setTimeout(()=>{ wrap.classList.add('slide-in'); setTimeout(loop, 5000); }, 50);
+    })();
 
     document.addEventListener("DOMContentLoaded", mountRuffle);
   </script>
