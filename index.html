@@ -15,7 +15,7 @@
 
   <!-- Core SEO -->
   <meta name="description" content="Play The Impossible Quiz Deluxe NG unblocked with Ruffle. Works at school, Chromebook friendly, fullscreen, and hosted by StaticQuasar931." />
-  <meta name="keywords" content="The Impossible Quiz Deluxe NG, Impossible Quiz Deluxe NG, Impossible Quiz, impossible quiz deluxe, impossible quiz ng, unblocked impossible quiz, impossible quiz deluxe ng unblocked game, impossible quiz unblocked g@me, ruffle flash emulator, flash game at school, school safe games, Chromebook game, free browser game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me" />
+  <meta name="keywords" content="The Impossible Quiz Deluxe NG, Impossible Quiz Deluxe NG, Impossible Quiz, impossible quiz deluxe, impossible quiz ng, impossible quiz unblocked, impossible quiz deluxe ng unblocked, impossible quiz deluxe ng unblocked g@me, ruffle flash emulator, flash game at school, school safe games, Chromebook game, free browser game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -28,8 +28,8 @@
   <meta name="twitter:description" content="Play the classic Impossible Quiz Deluxe NG right in your browser with Ruffle." />
   <meta name="twitter:image" content="https://res.cloudinary.com/dlq5fztla/image/upload/v1761090959/flash_365143_card_a5fbku.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://res.cloudinary.com/dlq5fztla/image/upload/v1761091026/screenshot_03-removebg-preview_wgfuii.png" />
+  <!-- Use OG image as favicon -->
+  <link rel="icon" href="https://res.cloudinary.com/dlq5fztla/image/upload/v1761090959/flash_365143_card_a5fbku.png" />
 
   <!-- Preload rotating popup icons (Google Form, Instagram) -->
   <link rel="preload" as="image" href="https://res.cloudinary.com/dcsrqennd/image/upload/v1747533056/raw_um4pvq.png">
@@ -39,54 +39,56 @@
     :root{
       --bg:#0d0f13; --panel:#141823; --text:#e8edf2; --muted:#a1adbb; --accent:#5fe1ff;
       --shadow:0 8px 28px rgba(0,0,0,.35);
+      --ring:rgba(95,225,255,.45);
     }
-    html,body{height:100%;margin:0;background:#000;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;overflow:hidden}
-    #stage{position:fixed;inset:0;display:grid;place-items:center;background:#000}
-    ruffle-player,#ruffle-container{width:100vw;height:100vh;display:block;background:#000}
+    html,body{
+      height:100%; margin:0; background:#000; color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif;
+      overflow:hidden;
+    }
 
-    /* Top-left Static link + label */
-    .static-menu{position:fixed;top:14px;left:14px;z-index:30;display:flex;flex-direction:column;gap:8px}
-    .static-menu-wrap{display:flex;align-items:center;gap:8px}
-    .static-link{position:relative;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;
-      border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
-      color:var(--text);text-decoration:none;backdrop-filter:blur(4px);box-shadow:var(--shadow);font-weight:800;font-size:14px}
-    .static-link:hover{border-color:rgba(95,225,255,.8)}
-    .twinkle{position:absolute;top:-6px;right:-6px;width:10px;height:10px;border-radius:50%;background:var(--accent);
-      box-shadow:0 0 12px var(--accent),0 0 24px var(--accent);animation:twinkle 2.6s ease-in-out infinite}
-    @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1)}}
-    .label{display:inline-flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#cfe9ff;font-size:12px}
-    .close-menu{cursor:pointer;user-select:none;padding:4px 8px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.06);font-weight:700;color:#ff6b6b}
+    /* Game stage */
+    #stage{position:fixed; inset:0; display:grid; place-items:center; background:#000}
+    ruffle-player,#ruffle-container{width:100vw; height:100vh; display:block; background:#000}
 
-    /* Center control bar */
-    .bar{position:fixed;left:50%;transform:translateX(-50%);top:14px;z-index:20;display:inline-flex;align-items:center;gap:10px;
-      background:rgba(10,12,16,.55);border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:12px;
-      box-shadow:var(--shadow);backdrop-filter:blur(6px);font-size:14px}
-    .bar button{appearance:none;border:0;cursor:pointer;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.08);
-      color:var(--text);font-weight:800}
-    .bar button:hover{background:rgba(255,255,255,.12)}
+    /* Top-left Static menu and label */
+    .static-menu{position:fixed; top:14px; left:14px; z-index:30; display:flex; flex-direction:column; gap:8px}
+    .static-menu-wrap{display:flex; align-items:center; gap:8px; animation:menuEnter .5s ease .05s both}
+    @keyframes menuEnter{from{opacity:0; transform:translateY(-8px)} to{opacity:1; transform:translateY(0)}}
+    .static-link{
+      position:relative; display:inline-flex; align-items:center; gap:8px; padding:10px 14px;
+      border-radius:12px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.08);
+      color:var(--text); text-decoration:none; backdrop-filter:blur(4px); box-shadow:var(--shadow);
+      font-weight:800; font-size:14px;
+    }
+    .static-link:hover{border-color:var(--ring)}
+    .twinkle{
+      position:absolute; top:-6px; right:-6px; width:10px; height:10px; border-radius:50%; background:var(--accent);
+      box-shadow:0 0 12px var(--accent), 0 0 24px var(--accent); animation:twinkle 2.6s ease-in-out infinite
+    }
+    @keyframes twinkle{0%,100%{opacity:.15; transform:scale(.7)} 50%{opacity:1; transform:scale(1)}}
+    .label{
+      display:inline-flex; gap:6px; align-items:center; padding:6px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); color:#cfe9ff; font-size:12px
+    }
+    .close-menu{
+      cursor:pointer; user-select:none; padding:6px 10px; border-radius:10px;
+      border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06);
+      font-weight:800; color:#ff6b6b
+    }
 
-    /* Bottom-right rotating buttons */
-    .rotators{position:fixed;right:16px;bottom:24px;z-index:40;width:100px;height:100px;pointer-events:none;opacity:0;transform:translateX(140px) scale(.96)}
-    .rotators a{display:block;width:100%;height:100%}
-    .rotators img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    /* Bottom-right rotating icon (Google Form ↔ Instagram) */
+    .rotators{position:fixed; right:24px; bottom:24px; z-index:40; width:100px; height:100px; pointer-events:none; opacity:0; transform:translateX(140px) scale(.96)}
+    .rotators a{display:block; width:100%; height:100%}
+    .rotators img{width:100%; height:100%; object-fit:cover; border-radius:50%; box-shadow:0 10px 28px rgba(0,0,0,.45)}
     .slide-in{animation:slideIn 2s ease forwards}
     .slide-out{animation:slideOut 2s ease forwards}
-    @keyframes slideIn{from{opacity:0;transform:translateX(140px) scale(.96)}to{opacity:1;transform:translateX(0) scale(1)}}
-    @keyframes slideOut{from{opacity:1;transform:translateX(0) scale(1)}to{opacity:0;transform:translateX(140px) scale(.96)}}
-    @media (max-width:768px){ .rotators{width:84px;height:84px} }
-
-    /* Tip */
-    .tip{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;background:rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.18);color:var(--text);padding:8px 12px;border-radius:12px;font-size:12px;z-index:35}
+    @keyframes slideIn{from{opacity:0; transform:translateX(140px) scale(.96)} to{opacity:1; transform:translateX(0) scale(1)}}
+    @keyframes slideOut{from{opacity:1; transform:translateX(0) scale(1)} to{opacity:0; transform:translateX(140px) scale(.96)}}
+    @media (max-width:768px){ .rotators{width:84px; height:84px} }
 
     /* Hidden SEO block */
-    .seo{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-
-    @media (max-width:640px){
-      .bar{top:auto;bottom:76px}
-    }
+    .seo{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
   </style>
 
   <!-- JSON-LD: VideoGame -->
@@ -136,15 +138,7 @@
     </div>
   </div>
 
-  <!-- Controls -->
-  <div class="bar" role="toolbar" aria-label="Game Controls">
-    <span style="opacity:.85;font-weight:800">The Impossible Quiz Deluxe NG</span>
-    <button id="btnFullscreen" title="Toggle fullscreen">Fullscreen</button>
-    <button id="btnFocus" title="Focus game">Focus</button>
-    <button id="btnReload" title="Reload game">Reload</button>
-  </div>
-
-  <!-- Game -->
+  <!-- Game only, no extra buttons -->
   <main id="stage" aria-label="Game area">
     <div id="ruffle-container"></div>
   </main>
@@ -156,22 +150,20 @@
     </a>
   </div>
 
-  <div class="tip" id="tip">Loading. If it stalls, press Reload. This build tries the working SWF path first.</div>
-
   <!-- Hidden SEO content (200+ words) -->
   <section class="seo" aria-hidden="true">
     <h1>The Impossible Quiz Deluxe NG unblocked with Ruffle</h1>
     <p>
-      Play <strong>The Impossible Quiz Deluxe NG</strong> right in your browser using the Ruffle Flash emulator. No old plugins are needed and everything runs over HTTPS for safer school networks. This page is tuned for Chromebooks and locked down environments, keeping things simple while still providing fullscreen controls, focus fixes for keyboard input, and a fast reload button if your session stalls. The objective is to answer trick questions and survive the classic troll logic that made the Impossible Quiz series famous. Expect humor, surprise mechanics, and lots of restarts.
+      Play <strong>The Impossible Quiz Deluxe NG</strong> right in your browser using the Ruffle Flash emulator. No legacy plugins are required and everything runs over HTTPS for safer school networks. This page is tuned for Chromebooks and other managed devices so the experience stays smooth and fullscreen. The classic Impossible Quiz design mixes trick questions, humor, and unexpected logic. Many prompts have misleading answers on purpose, so read carefully and expect restarts. Keyboard and mouse input are captured directly by the player when you click the game area.
     </p>
     <p>
-      This version is hosted by <strong>StaticQuasar931</strong> on GitHub Pages with a direct SWF link to improve reliability on school filters. If one mirror is blocked, the script can attempt alternative file names. Your progress is temporary and tied to the session. Keep the tab open during long play. For more school friendly pages, visit the full list at
-      <a href="https://sites.google.com/view/staticquasar931/gm3z">https://sites.google.com/view/staticquasar931/gm3z</a> or the main homepage at
-      <a href="https://sites.google.com/view/staticquasar931">https://sites.google.com/view/staticquasar931</a>. Popular pages include
-      <a href="https://sites.google.com/view/staticquasar931/gm3z/coreball">Core Ball</a> and other puzzle or arcade picks that load fullscreen on Chromebook, PC, and many mobile devices.
+      This build is hosted by <strong>StaticQuasar931</strong> on GitHub Pages with a direct SWF path to improve reliability on school filters. If one filename is blocked, the script will try common alternates automatically. Your progress is temporary and tied to the open tab. Keep the tab open during longer runs. For more school friendly games, visit
+      <a href="https://sites.google.com/view/staticquasar931/gm3z">https://sites.google.com/view/staticquasar931/gm3z</a> or the homepage at
+      <a href="https://sites.google.com/view/staticquasar931">https://sites.google.com/view/staticquasar931</a>. You can also try other puzzle and arcade picks like
+      <a href="https://sites.google.com/view/staticquasar931/gm3z/coreball">Core Ball</a>.
     </p>
     <p>
-      Keywords: the impossible quiz deluxe ng unblocked game, impossible quiz deluxe ng unblocked g@me, impossible quiz unblocked, ruffle emulator, flash game at school, school safe, Chromebook friendly, free puzzle game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me.
+      Keywords: the impossible quiz deluxe ng unblocked game, impossible quiz deluxe ng unblocked g@me, impossible quiz unblocked, flash game at school, ruffle emulator, school safe games, Chromebook friendly, free puzzle game, staticquasar931, static 931, staticq, staticq931, 931 games, 931 g@mes, unbl0cked, game, g@me.
     </p>
   </section>
 
@@ -204,10 +196,10 @@
       maybeHide();
     })();
 
-    // Ruffle mount + working SWF sequence
+    // Ruffle mount with working SWF sequence
     const ABS_ROOT = "https://staticquasar931.github.io/The-Impossible-Quiz-Deluxe-NG";
     const SWF_CANDIDATES = [
-      // Your reported working link first
+      // Reported working path first
       `${ABS_ROOT}/365143_Impossible_Quiz_Deluxe_NG..swf`,
       // Fallbacks
       `${ABS_ROOT}/365143_Impossible_Quiz_Deluxe_NG.swf`,
@@ -228,38 +220,33 @@
       player.style.height = "100%";
       container.appendChild(player);
 
-      document.getElementById("btnFullscreen").onclick = () => player.requestFullscreen();
-      document.getElementById("btnFocus").onclick = () => player.focus();
-      document.getElementById("btnReload").onclick = () => tryLoadSequence(true);
-
       tryLoadSequence(false);
     }
 
     async function tryLoadSequence(isManualReload){
-      const tip = document.getElementById("tip");
       if(isManualReload) currentIndex = 0;
 
       for(let i=currentIndex;i<SWF_CANDIDATES.length;i++){
         const url = SWF_CANDIDATES[i];
-        tip.textContent = `Loading SWF: ${url}`;
         try{
           await player.load(url);
-          tip.textContent = `Loaded: ${url}`;
           currentIndex = i; // remember which one works
           return;
         }catch(e){
           console.warn("Failed swf path", url, e);
-          tip.textContent = `Could not load ${url}. Trying next path...`;
         }
       }
-      tip.textContent = "No SWF found at the tried paths. Confirm the file name in the repo. Expected one of: 365143_Impossible_Quiz_Deluxe_NG..swf or 365143_Impossible_Quiz_Deluxe_NG.swf at the site root.";
+      console.error("No SWF found at the tried paths. Check filenames at the site root.");
     }
 
     // Click anywhere on stage to focus the player
     document.getElementById("stage").addEventListener("click", ()=>{ if(player && player.focus) player.focus(); });
 
-    // Keep the player perfectly fitted
-    new ResizeObserver(()=>{ if(player){ player.style.width="100%"; player.style.height="100%"; } }).observe(document.body);
+    // Keep the player perfectly fitted on resize and viewport changes
+    const fit = () => { if(player){ player.style.width="100%"; player.style.height="100%"; } };
+    new ResizeObserver(fit).observe(document.body);
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', fit, {passive:true});
+    window.addEventListener('resize', fit, {passive:true});
 
     // Rotating popup: Google Form ↔ Instagram
     (function(){
@@ -292,7 +279,7 @@
         }
       }
 
-      // Start with Google Form then Instagram
+      // Start animation
       show(LINKS[0]);
       setTimeout(()=>{ wrap.classList.add('slide-in'); setTimeout(loop, 5000); }, 50);
     })();
